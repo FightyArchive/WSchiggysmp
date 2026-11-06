@@ -1,0 +1,26 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+players-only: "{prefix}<red>Dieser Befehl ist nur für Spieler."
+player-unknown: "{prefix}<red>Der Spieler <white>{player}</white> ist unbekannt."
+
+stats-header: "{prefix}<gold>Statistiken von <white>{player}"
+stats-kills: "<gray> Kills: <white>{kills}"
+stats-deaths: "<gray> Tode: <white>{deaths}"
+stats-kdr: "<gray> K/D: <white>{kdr}"
+stats-playtime: "<gray> Spielzeit: <white>{playtime}"
+stats-money: "<gray> Geld: <green>{money}"
+stats-shards: "<gray> Shards: <light_purple>{shards}"
+
+gui-lb-title: "<dark_gray><underlined>Bestenliste: {category}"
+gui-lb-head-name: "<yellow><bold>#{rank} <white>{player}"
+gui-lb-head-lore:
+  - "<gray>{category}: <white><bold>{value}"
+gui-lb-empty: "<gray><bold>Noch keine Einträge"
+gui-lb-button-lore:
+  - "<yellow>Klicke, um diese Liste zu zeigen"
+gui-lb-selected: "<green>● Ausgewählt"
+category-MONEY: "Geld"
+category-KILLS: "Kills"
+category-DEATHS: "Tode"
+category-PLAYTIME: "Spielzeit"

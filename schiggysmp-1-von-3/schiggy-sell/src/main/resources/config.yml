@@ -1,0 +1,23 @@
+# Wie lange der Verkaufs-Verlauf (/sellhistory) gespeichert wird (Tage, 0 = nie loeschen)
+history-days: 30
+
+# SchiggySell
+#
+# Verkaufs-Levels: Je mehr Geld ein Spieler insgesamt durch Verkaeufe verdient hat, desto hoeher sein Level
+# und sein Multiplikator. "required" ist das insgesamt verdiente Geld (normale Einheiten).
+levels:
+  - required: 0
+    multiplier: 1.0
+  - required: 100000
+    multiplier: 1.1
+  - required: 500000
+    multiplier: 1.25
+  - required: 2000000
+    multiplier: 1.5
+  - required: 10000000
+    multiplier: 1.75
+  - required: 50000000
+    multiplier: 2.0
+
+# Zusaetzlicher Multiplikator ueber LuckPerms-Rechte, z. B. schiggy.sell.multiplier.1.5
+# Der hoechste passende Wert gilt und wird mit dem Level-Multiplikator multipliziert.

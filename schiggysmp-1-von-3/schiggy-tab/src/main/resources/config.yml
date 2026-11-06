@@ -1,0 +1,56 @@
+# SchiggyTab
+# Texte im MiniMessage-Format (https://docs.advntr.dev/minimessage/format.html)
+#
+# Platzhalter:
+#   {player}      Spielername
+#   {prefix}      Rang-Prefix aus LuckPerms (leer ohne LuckPerms)
+#   {rank}        Name der primaeren LuckPerms-Gruppe
+#   {ping}        Ping in ms
+#   {online}      Spieler online
+#   {max}         maximale Spielerzahl
+#   {world}       aktuelle Welt
+#   {money}       Geld, kurz (1.5K, 2M) - braucht SchiggyEconomy
+#   {money_full}  Geld, ausgeschrieben
+#   {shards}      Shards - braucht SchiggyEconomy
+#   {money_per_sec}  Geld, das du pro Sekunde verdienst (Schnitt der letzten 10 Sekunden) - braucht SchiggyEconomy
+#   {kills} {deaths} {kdr} {playtime}  Statistiken - braucht SchiggyStats
+
+# Wie oft alles aktualisiert wird (in Ticks, 20 = 1 Sekunde, mindestens 5).
+# Aenderungen daran gelten erst nach erneutem Beitreten.
+update-interval-ticks: 20
+
+tab:
+  enabled: true
+  header:
+    - ""
+    - "<gradient:#ff5555:#ffaa00><bold>SCHIGGYSMP</bold></gradient>"
+    - "<gray>Online: <white>{online}<dark_gray>/<white>{max}"
+    - ""
+  footer:
+    - ""
+    - "<gray>Ping: <white>{ping}ms <dark_gray>| <gray>Geld: <green>${money} <dark_gray>| <gray>Shards: <light_purple>{shards}"
+    - ""
+  # So erscheint jeder Spieler in der Tab-Liste
+  name-format: "{prefix}<white>{player}"
+
+# Geld unter dem Namen jedes Spielers (die Zahl ist das Geld in ganzen Einheiten, daneben steht der Titel)
+below-name:
+  enabled: true
+  title: "<green>$"
+
+scoreboard:
+  enabled: true
+  title: "<gradient:#ff5555:#ffaa00><bold>SCHIGGYSMP</bold></gradient>"
+  # Maximal 15 Zeilen. Leere Zeilen ("") sind Abstaende.
+  lines:
+    - ""
+    - "<gray>Geld: <green>${money}"
+    - "<gray>Shards: <light_purple>{shards}"
+    - "<gray>Pro Sekunde: <green>+${money_per_sec}/s"
+    - ""
+    - "<gray>Kills: <white>{kills}"
+    - "<gray>Tode: <white>{deaths}"
+    - "<gray>Spielzeit: <white>{playtime}"
+    - ""
+    - "<gray>Ping: <white>{ping}ms"
+    - "<dark_gray>schiggysmp"

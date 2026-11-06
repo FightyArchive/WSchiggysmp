@@ -1,0 +1,19 @@
+name: SchiggySign
+version: '${project.version}'
+main: de.schiggy.sign.SchiggySign
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore]
+softdepend: [LuckPerms]
+authors: [FightyFinn]
+description: Signiert Items - unter dem Item-Namen steht dein Rang-Prefix und dein Name (/sign)
+commands:
+  sign:
+    description: Signiert das Item in deiner Hand (/sign remove entfernt die Signatur)
+permissions:
+  schiggy.sign.use:
+    description: /sign benutzen
+    default: true
+  schiggy.sign.admin:
+    description: Signaturen anderer Spieler ueberschreiben und entfernen
+    default: op

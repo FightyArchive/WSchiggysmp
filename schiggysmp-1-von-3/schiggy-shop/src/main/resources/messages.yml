@@ -1,0 +1,58 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+players-only: "{prefix}<red>Dieser Befehl ist nur für Spieler."
+error: "{prefix}<red>Es ist ein Fehler aufgetreten. Dir wurde nichts berechnet."
+unknown-category: "{prefix}<red>Unbekannte Kategorie. Öffne <white>/shop</white> und wähle eine aus."
+reloaded: "{prefix}<green>SchiggyShop wurde neu geladen (<white>{count}</white> Kategorien)."
+
+bought: "{prefix}<green>Gekauft: <white>{amount}x {item}</white> <gray>für <green>{price}</green>."
+not-enough-money: "{prefix}<red>Du hast nicht genug Geld. Dir fehlt etwas für <white>{price}</white>."
+not-enough-shards: "{prefix}<red>Du hast nicht genug Shards. Du brauchst <white>{price}</white>."
+inventory-full: "{prefix}<red>Dein Inventar hat nicht genug Platz für diesen Kauf."
+limit-reached: "{prefix}<red>Du hast das Tageslimit von <white>{limit}</white> für dieses Item erreicht."
+limit-exceeded: "{prefix}<red>Dein Kontostand würde das Limit überschreiten."
+
+# ---------------- Hauptmenü ----------------
+gui-shop-title: "<dark_gray><underlined>Shop"
+gui-shop-category-lore:
+  - "<gray>Items: <white>{count}"
+  - ""
+  - "<yellow>Klicke zum Öffnen"
+gui-shop-balance-name: "<gold><bold>Dein Guthaben"
+gui-shop-balance-lore:
+  - "<gray>Geld: <green>{money}"
+  - "<gray>Shards: <light_purple>{shards}"
+
+# ---------------- Kategorie ----------------
+gui-shop-category-title: "<dark_gray>{category} <gray>({page}/{pages})"
+gui-shop-item-name: "<white>{item}"
+gui-shop-item-lore:
+  - "<gray>Preis: <green>{price}</green> <gray>pro Stück"
+gui-shop-item-limit: "<gray>Tageslimit: <white>{limit}"
+gui-shop-item-click: "<yellow>Klicke zum Kaufen"
+gui-shop-back-name: "<yellow><bold>Zurück"
+gui-shop-prev-name: "<yellow><bold>Vorherige Seite"
+gui-shop-next-name: "<yellow><bold>Nächste Seite"
+gui-shop-first-name: "<gold><bold>Erste Seite"
+gui-shop-last-name: "<gold><bold>Letzte Seite"
+gui-shop-skip-back-name: "<yellow><bold>5 Seiten zurück"
+gui-shop-skip-next-name: "<yellow><bold>5 Seiten vor"
+gui-close-name: "<red><bold>Schließen"
+
+# ---------------- Kaufmenü ----------------
+gui-buy-title: "<dark_gray>Kauf bestätigen"
+gui-buy-item-name: "<white><bold>{item}"
+gui-buy-item-lore:
+  - "<gray>Menge: <white>{amount}"
+  - "<gray>Einzelpreis: <green>{unit}"
+  - "<gray>Gesamtpreis: <green><bold>{total}"
+gui-buy-add: "<green><bold>+{n}"
+gui-buy-remove: "<red><bold>-{n}"
+gui-buy-set: "<yellow><bold>Menge: {n}"
+gui-buy-confirm-name: "<green><bold>Kaufen"
+gui-buy-confirm-lore:
+  - "<gray>{amount}x für <green>{total}"
+gui-buy-cancel-name: "<red><bold>Abbrechen"
+gui-buy-cancel-lore:
+  - "<gray>Zurück zur Kategorie."
