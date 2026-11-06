@@ -1,5 +1,5 @@
 
-name: SchiggyChat Build
+name: SchiggySMP Full Build
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    name: Build SchiggyChat
+    name: Build All SchiggySMP Plugins
     runs-on: ubuntu-latest
 
     steps:
@@ -26,53 +26,47 @@ jobs:
           java-version: '21'
           cache: maven
 
-      - name: Find Parent Maven Project
+      - name: Find Parent POM
         id: project
         run: |
-          echo "Repository-Inhalt:"
-          ls -la
-
           POM="./schiggysmp-1-von-3/pom.xml"
 
           if [ ! -f "$POM" ]; then
-            echo "Übergeordnete pom.xml nicht gefunden!"
+            echo "Parent-POM nicht gefunden!"
             find . -name pom.xml -not -path '*/target/*'
             exit 1
           fi
 
           echo "pom=$POM" >> "$GITHUB_OUTPUT"
-          echo "Verwende: $POM"
 
-      - name: Build with Maven
+      - name: Build All Modules
         run: |
           mvn -B clean package \
             -f "${{ steps.project.outputs.pom }}" \
-            -pl schiggy-stats \
-            -am
+            -DskipTests
 
-      - name: Find Plugin JAR
-        id: jar
+      - name: Collect All Plugin JARs
         run: |
-          JAR=$(find ./schiggysmp-1-von-3 \
+          mkdir -p build-artifacts
+
+          find ./schiggysmp-1-von-3 \
             -path '*/target/*.jar' \
             -not -name 'original-*.jar' \
             -not -name '*-sources.jar' \
             -not -name '*-javadoc.jar' \
-            | grep '/schiggy-stats/' \
-            | head -n 1)
+            -exec cp {} build-artifacts/ \;
 
-          if [ -z "$JAR" ]; then
-            echo "Keine Stats-JAR gefunden!"
-            find ./schiggysmp-1-von-3 -type f
+          if [ -z "$(ls -A build-artifacts)" ]; then
+            echo "Keine JAR-Dateien gefunden!"
             exit 1
           fi
 
-          echo "path=$JAR" >> "$GITHUB_OUTPUT"
-          echo "Gefunden: $JAR"
+          echo "Gebaut wurden:"
+          ls -lh build-artifacts
 
-      - name: Upload Plugin JAR
+      - name: Upload All Plugin JARs
         uses: actions/upload-artifact@v4
         with:
-          name: SchiggyStats
-          path: ${{ steps.jar.outputs.path }}
+          name: SchiggySMP-ALL-PLUGINS
+          path: build-artifacts/*.jar
           if-no-files-found: error
