@@ -29,18 +29,19 @@ jobs:
       - name: Find Maven Project
         id: project
         run: |
-          POM=$(find ./schiggysmp-1-von-2 \
-            -name pom.xml \
-            -not -path '*/target/*' \
-            | head -n 1)
+          echo "Repository-Inhalt:"
+          ls -la
+
+          POM=$(find . -name pom.xml -not -path '*/target/*' | head -n 1)
 
           if [ -z "$POM" ]; then
-            echo "Keine pom.xml in schiggysmp-1-von-2 gefunden!"
+            echo "Keine pom.xml gefunden!"
+            find . -maxdepth 5 -type f
             exit 1
           fi
 
           echo "pom=$POM" >> "$GITHUB_OUTPUT"
-          echo "Maven-Projekt: $POM"
+          echo "Gefunden: $POM"
 
       - name: Build with Maven
         run: mvn -B clean package -f "${{ steps.project.outputs.pom }}"
@@ -48,19 +49,18 @@ jobs:
       - name: Find Plugin JAR
         id: jar
         run: |
-          JAR=$(find ./schiggysmp-1-von-2 \
-            -path '*/target/*.jar' \
+          JAR=$(find . -path '*/target/*.jar' \
             -not -name 'original-*.jar' \
             | head -n 1)
 
           if [ -z "$JAR" ]; then
-            echo "Keine Plugin-JAR gefunden!"
-            find ./schiggysmp-1-von-2 -type f
+            echo "Keine JAR gefunden!"
+            find . -type f
             exit 1
           fi
 
           echo "path=$JAR" >> "$GITHUB_OUTPUT"
-          echo "Gefundene JAR: $JAR"
+          echo "Gefunden: $JAR"
 
       - name: Upload Plugin JAR
         uses: actions/upload-artifact@v4
@@ -68,4 +68,3 @@ jobs:
           name: SchiggyChat-2.0.0
           path: ${{ steps.jar.outputs.path }}
           if-no-files-found: error
-
