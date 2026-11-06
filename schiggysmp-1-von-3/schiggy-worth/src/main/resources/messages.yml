@@ -1,0 +1,42 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+players-only: "{prefix}<red>Dieser Befehl ist nur für Spieler."
+error: "{prefix}<red>Es ist ein Fehler aufgetreten. Bitte melde das einem Admin."
+hold-item: "{prefix}<red>Du musst ein Item in der Hand halten oder einen Item-Namen angeben."
+unknown-item: "{prefix}<red>Unbekanntes Item: <white>{item}</white>"
+
+worth-info: "{prefix}<white>{item}</white><gray>: <green>{price}</green> <gray>pro Stück <dark_gray>| <green>{stack}</green> <gray>pro Stack"
+worth-hand: "{prefix}<gray>Dein Stack in der Hand (<white>{amount}x</white>): <green>{total}"
+worth-none: "{prefix}<white>{item}</white> <red>hat keinen Verkaufswert."
+
+usage-set: "{prefix}<gray>Benutzung: <white>/worth set [Preis]</white> <gray>oder <white>/worth set [Item] [Preis]"
+usage-remove: "{prefix}<gray>Benutzung: <white>/worth remove [Item]"
+invalid-price: "{prefix}<red>Ungültiger Preis. Beispiele: <white>10</white>, <white>2.5</white>, <white>1k</white>"
+price-set: "{prefix}<gray>Preis von <white>{item}</white> auf <green>{price}</green> <gray>gesetzt."
+price-removed: "{prefix}<gray>Preis von <white>{item}</white> <red>entfernt</red>."
+price-not-set: "{prefix}<white>{item}</white> <red>hatte keinen Preis."
+imported: "{prefix}<green>{count}</green> <gray>Preise aus der prices.yml importiert."
+
+# ---------------- Preisliste /worth list ----------------
+gui-worth-title: "<dark_gray>Preisliste <gray>({page}/{pages})"
+gui-worth-item-name: "<white>{item}"
+gui-worth-item-lore:
+  - "<gray>Wert: <green>{price}</green> <gray>pro Stück"
+  - "<gray>Stack: <green>{stack}"
+gui-worth-prev-name: "<yellow><bold>Vorherige Seite"
+gui-worth-next-name: "<yellow><bold>Nächste Seite"
+gui-worth-info-name: "<gold><bold>Preisliste"
+gui-worth-info-lore:
+  - "<gray>Seite <white>{page}</white> von <white>{pages}"
+  - "<gray>Items mit Preis: <white>{count}"
+gui-close-name: "<red><bold>Schließen"
+
+gui-worth-sort-name: "<aqua><bold>Sortierung"
+gui-worth-sort-lore:
+  - "<gray>Aktuell: <white>{sort}"
+  - ""
+  - "<yellow>Klicke zum Wechseln"
+worth-sort-NAME: "Name (A-Z)"
+worth-sort-WORTH_DESC: "Worth (höchster zuerst)"
+worth-sort-WORTH_ASC: "Worth (niedrigster zuerst)"
