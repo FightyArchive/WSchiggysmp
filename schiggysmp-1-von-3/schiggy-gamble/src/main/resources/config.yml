@@ -1,0 +1,26 @@
+# SchiggyGamble - /invest
+#
+# Spieler legen Geld an. Nach der Laufzeit holen sie es mit einem zufaelligen Ergebnis ab.
+# Das Ergebnis wird beim Anlegen festgelegt (nicht erst beim Abholen) und bleibt geheim, bis es abgeholt wird.
+
+# Laufzeit einer Investition in Minuten
+duration-minutes: 30
+
+# Wie viele Investitionen ein Spieler gleichzeitig laufen haben darf
+max-active: 3
+
+# Erlaubter Betrag pro Investition (normale Einheiten)
+min-amount: 100
+max-amount: 100000000
+
+# Die Betraege der Schnellwahl-Knoepfe im Menue (maximal 4)
+amounts: [1000, 10000, 100000, 1000000]
+
+# Moegliche Ergebnisse: chance = Gewicht, multiplier = Faktor auf den eingesetzten Betrag
+# (0.5 = Haelfte zurueck, 2.0 = doppelt). Mit diesen Werten bekommt man im Schnitt ca. 97 % zurueck.
+outcomes:
+  - {chance: 40, multiplier: 0.5}
+  - {chance: 35, multiplier: 0.9}
+  - {chance: 15, multiplier: 1.5}
+  - {chance: 9, multiplier: 2.0}
+  - {chance: 1, multiplier: 5.0}

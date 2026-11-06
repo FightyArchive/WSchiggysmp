@@ -1,0 +1,19 @@
+name: SchiggyCrates
+version: '${project.version}'
+main: de.schiggy.crates.SchiggyCrates
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore]
+authors: [FightyFinn]
+description: Crates mit Schlüsseln, Vorschau, Roulette-Animation und Gewinn-Verlauf (/crate)
+commands:
+  crate:
+    description: Crates verwalten und Schlüssel anzeigen
+    aliases: [crates]
+permissions:
+  schiggy.crates.use:
+    description: Crates öffnen und /crate benutzen
+    default: true
+  schiggy.crates.admin:
+    description: Schlüssel geben, Crates platzieren und entfernen
+    default: op

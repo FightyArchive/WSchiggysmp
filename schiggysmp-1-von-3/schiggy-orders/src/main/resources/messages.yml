@@ -1,0 +1,145 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+players-only: "{prefix}<red>Dieser Befehl ist nur für Spieler."
+error: "{prefix}<red>Es ist ein Fehler aufgetreten. Deine Items bzw. dein Geld wurden zurückgegeben."
+reloaded: "{prefix}<green>SchiggyOrders wurde neu geladen."
+usage: "{prefix}<gray>Benutzung: <white>/order</white><gray>, <white>/order create [Menge] [Preis pro Stück] [Item]</white><gray>, <white>/order search [Text]</white> <gray>oder <white>/order mine"
+
+# ---------------- Order erstellen ----------------
+create-usage: "{prefix}<gray>Benutzung: <white>/order create [Menge] [Preis pro Stück] [Item]</white> <gray>(ohne Item: das Item in deiner Hand)"
+create-no-item: "{prefix}<red>Halte ein Item in der Hand oder gib einen Item-Namen an."
+create-unknown-item: "{prefix}<red>Unbekanntes Item: <white>{item}</white>"
+create-blacklisted: "{prefix}<red>Dieses Item darf nicht bestellt werden."
+create-invalid-amount: "{prefix}<red>Ungültige Menge. Erlaubt: <white>1</white> bis <white>{max}</white>."
+create-invalid-price: "{prefix}<red>Ungültiger Preis. Beispiele: <white>10</white>, <white>2.5</white>, <white>1k</white>"
+create-price-range: "{prefix}<red>Der Preis pro Stück muss zwischen <white>{min}</white> und <white>{max}</white> liegen."
+create-limit: "{prefix}<red>Du hast schon <white>{limit}</white> aktive Orders."
+create-no-money: "{prefix}<red>Du hast nicht genug Geld. Die Order kostet <white>{total}</white>."
+create-success: "{prefix}<green>Order erstellt: <white>{amount}x {item}</white> <gray>für je <green>{unit}</green> <dark_gray>(insgesamt {total} reserviert, läuft {duration})"
+
+# ---------------- Liefern ----------------
+own-order: "{prefix}<red>Das ist deine eigene Order. Verwalte sie unter <white>Deine Orders</white>."
+no-items: "{prefix}<red>Du hast kein unverändertes <white>{item}</white> im Inventar."
+order-gone: "{prefix}<red>Diese Order hat sich geändert oder ist nicht mehr offen. Deine Items wurden zurückgegeben."
+fulfilled: "{prefix}<green>Geliefert: <white>{amount}x {item}</white> <gray>für <green>{payout}</green> <dark_gray>(Gebühr {fee})"
+filled-notify: "{prefix}<white>{player}</white> <gray>hat <white>{amount}x {item}</white> für deine Order geliefert. Hole sie unter <white>Deine Orders</white> ab."
+
+# ---------------- Verwalten ----------------
+cancelled: "{prefix}<gray>Order abgebrochen. Zurückerstattet: <green>{refund}</green>"
+cancel-failed: "{prefix}<red>Diese Order kann nicht abgebrochen werden."
+claimed: "{prefix}<green><white>{amount}x {item}</white> abgeholt."
+claim-failed: "{prefix}<red>Hier gibt es nichts abzuholen."
+expired-notify: "{prefix}<gray>Deine Order für <white>{item}</white> ist abgelaufen. Zurückerstattet: <green>{refund}</green>"
+search-hint: "{prefix}<gray>Suche mit <white>/order search [Text]</white> <gray>(z. B. <white>/order search cactus</white>)."
+search-prompt: "{prefix}<gray>Schreibe den Suchbegriff in den Chat. <dark_gray>(<white>cancel</white> zum Abbrechen)"
+search-set: "{prefix}<gray>Suche: <white>{text}"
+
+# ---------------- Menü ----------------
+gui-orders-title: "<dark_gray><underlined>Orders <gray>(Seite {page}/{pages})"
+gui-orders-mine-title: "<dark_gray><underlined>Deine Orders"
+
+gui-order-name: "<white><bold>{item}"
+gui-order-lore:
+  - "<gray>Gesucht: <white>{remaining}</white> <dark_gray>/ {total}"
+  - "<gray>Preis pro Stück: <green>{unit}"
+  - "<gray>Wert des Rests: <green>{value}"
+  - "<gray>Besteller: <white>{buyer}"
+  - "<gray>Läuft noch: <white>{time}"
+  - ""
+  - "<gray>Du hast: <white>{have}"
+  - "<yellow>Klicke, um Items zu liefern"
+gui-mine-order-lore:
+  - "<gray>Geliefert: <white>{filled}</white> <dark_gray>/ {total}"
+  - "<gray>Preis pro Stück: <green>{unit}"
+  - "<gray>Status: <white>{status}"
+  - "<gray>Abholbereit: <white>{claimable}"
+gui-mine-claim-line: "<yellow>Linksklick: <white>Items abholen"
+gui-mine-cancel-line: "<yellow>Rechtsklick: <white>Order abbrechen (Rückerstattung {refund})"
+status-ACTIVE: "Aktiv"
+status-COMPLETED: "Erfüllt"
+status-CANCELLED: "Abgebrochen"
+status-EXPIRED: "Abgelaufen"
+
+gui-mine-name: "<gold><bold>Deine Orders"
+gui-mine-lore:
+  - "<gray>Verwalte deine Orders und"
+  - "<gray>hole gelieferte Items ab."
+gui-sort-name: "<aqua><bold>Sortierung"
+gui-sort-lore:
+  - "<gray>Aktuell: <white>{sort}"
+  - ""
+  - "<yellow>Klicke zum Wechseln"
+sort-NEWEST: "Neueste zuerst"
+sort-OLDEST: "Älteste zuerst"
+sort-PRICE_DESC: "Höchster Preis zuerst"
+sort-PRICE_ASC: "Niedrigster Preis zuerst"
+sort-NAME: "Name (A-Z)"
+sort-WORTH: "Worth (wertvollste Items zuerst)"
+gui-prev-name: "<red><bold>Vorherige Seite"
+gui-next-name: "<green><bold>Nächste Seite"
+gui-search-name: "<yellow><bold>Suche"
+gui-search-lore:
+  - "<gray>Aktuelle Suche: <white>{search}"
+  - ""
+  - "<yellow>Linksklick: <white>Suchen"
+  - "<yellow>Rechtsklick: <white>Suche löschen"
+gui-search-none: "keine"
+gui-create-name: "<green><bold>Order erstellen"
+gui-create-lore:
+  - "<gray>Wähle ein beliebiges Item aus,"
+  - "<gray>lege Menge und Preis fest und"
+  - "<gray>erstelle deine Order."
+  - ""
+  - "<yellow>Klicke zum Erstellen"
+gui-help-name: "<gold><bold>Hilfe"
+gui-help-lore:
+  - "<gray>Klicke auf eine Order, um alle"
+  - "<gray>passenden Items aus deinem Inventar zu liefern."
+  - "<gray>Orders laufen <white>{duration}</white>."
+  - "<gray>Gebühr für Lieferanten: <white>{fee}%"
+gui-back-name: "<yellow><bold>Zurück"
+
+# ---------------- Order im Menü erstellen ----------------
+create-hold-item: "{prefix}<red>Halte das Item, das du bestellen willst, in der Hand und klicke dann auf den Trichter."
+gui-create-title: "<dark_gray><underlined>Order erstellen"
+gui-create-item-name: "<white><bold>{item}"
+gui-create-item-lore:
+  - "<gray>Menge: <white>{amount}"
+  - "<gray>Preis pro Stück: <green>{unit}"
+  - "<gray>Gesamt (reserviert): <green><bold>{total}"
+  - ""
+  - "<yellow>Klicke, um ein anderes Item zu wählen"
+gui-create-add: "<green><bold>+{n}"
+gui-create-remove: "<red><bold>-{n}"
+gui-create-amount-name: "<yellow><bold>Menge: {amount}"
+gui-create-amount-lore:
+  - "<gray>So viele Stück möchtest du bestellen."
+gui-create-price-name: "<yellow><bold>Preis pro Stück: {unit}"
+gui-create-price-lore:
+  - "<gray>So viel zahlst du pro Stück."
+gui-create-confirm-name: "<green><bold>Order erstellen"
+gui-create-confirm-lore:
+  - "<gray>{amount}x {item} für je <green>{unit}"
+  - "<gray>Das Geld (<green>{total}</green>) wird reserviert."
+gui-create-cancel-name: "<red><bold>Abbrechen"
+gui-create-cancel-lore:
+  - "<gray>Zurück zu den Orders."
+
+# ---------------- Item auswählen ----------------
+gui-pick-title: "<dark_gray><underlined>Item wählen <gray>(Seite {page}/{pages})"
+gui-pick-name: "<white><bold>{item}"
+gui-pick-lore:
+  - ""
+  - "<yellow>Klicke, um dieses Item zu bestellen"
+gui-pick-hand-name: "<green><bold>Item aus der Hand"
+gui-pick-hand-lore:
+  - "<gray>Nimm das Item, das du gerade"
+  - "<gray>in der Hand hältst."
+gui-pick-hand-empty: "<red><bold>Nichts in der Hand"
+gui-pick-help-name: "<gold><bold>Hilfe"
+gui-pick-help-lore:
+  - "<gray>Wähle ein Item aus der Liste oder"
+  - "<gray>suche mit dem Fernrohr danach."
+  - "<gray>Das Fernrohr fragt dich im Chat nach"
+  - "<gray>dem Namen."

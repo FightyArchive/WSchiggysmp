@@ -1,0 +1,60 @@
+# SchiggyCommands - Befehls-Whitelist
+#
+# Spieler duerfen NUR die Befehle benutzen, die ihre Gruppen erlauben. Alle anderen Befehle werden blockiert
+# und verschwinden auch aus der Tab-Vervollstaendigung.
+#
+# Gruppen entsprechen den LuckPerms-Gruppen: Wer das Recht group.<name> hat (das hat jedes Mitglied der
+# LuckPerms-Gruppe automatisch), bekommt die Befehle dieser Gruppe zusaetzlich.
+#   default  gilt fuer alle Spieler
+#   "*"      erlaubt jeden Befehl
+# Die Befehle schreibst du ohne Schraegstrich. Aliase eines Befehls sind automatisch mit erlaubt.
+enabled: true
+
+# Wer dieses Recht hat, darf immer alles (Standard: OPs)
+bypass-permission: schiggy.commands.bypass
+
+groups:
+  default:
+    - help
+    - spawn
+    - rules
+    - msg
+    - tell
+    - reply
+    - r
+    - home
+    - homes
+    - sethome
+    - delhome
+    - tpa
+    - tpahere
+    - tpaccept
+    - tpdeny
+    - rtp
+    - shop
+    - sell
+    - sellmulti
+    - sellhistory
+    - worth
+    - bal
+    - balance
+    - baltop
+    - pay
+    - shards
+    - ah
+    - order
+    - kit
+    - settings
+    - invest
+    - crate
+    - crates
+    - sign
+    - bounty
+    - team
+    - t
+    - tc
+  vip:
+    - fly
+    - nick
+  staff:
+    - "*"

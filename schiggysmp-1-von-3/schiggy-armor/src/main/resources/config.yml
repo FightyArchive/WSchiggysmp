@@ -1,0 +1,83 @@
+# SchiggyArmor - eigene Ruestungs-Sets
+#
+# Jedes Set hat bis zu vier Teile (helmet, chestplate, leggings, boots). Wer Teile eines Sets traegt, bekommt die
+# Boni, deren "pieces" erreicht ist. Die Boni addieren sich: Bei 4 Teilen gelten auch die Boni fuer 1 und 2 Teile.
+#
+# Effekte: name:stufe  (Stufe 0 = I, 1 = II, ...). Namen: speed, jump_boost, regeneration, resistance, strength,
+# haste, fire_resistance, water_breathing, night_vision, absorption, health_boost, saturation, slow_falling ...
+#
+# Items bekommst du mit /armor give [Spieler] [Set] [helmet|chestplate|leggings|boots|all]
+sets:
+  phoenix:
+    name: "<gradient:#ff5500:#ffaa00><bold>Phönix"
+    unbreakable: true
+    enchants:
+      - protection:4
+      - unbreaking:3
+      - mending:1
+    pieces:
+      helmet:
+        material: NETHERITE_HELMET
+      chestplate:
+        material: NETHERITE_CHESTPLATE
+      leggings:
+        material: NETHERITE_LEGGINGS
+      boots:
+        material: NETHERITE_BOOTS
+    bonuses:
+      - pieces: 1
+        effects: ["fire_resistance:0"]
+      - pieces: 2
+        effects: ["speed:0"]
+      - pieces: 4
+        effects: ["speed:1", "resistance:0", "regeneration:0", "jump_boost:1"]
+
+  speedster:
+    name: "<gradient:#00ffff:#00ff88><bold>Sprinter"
+    unbreakable: true
+    enchants:
+      - protection:3
+      - feather_falling:4
+    pieces:
+      leggings:
+        material: DIAMOND_LEGGINGS
+      boots:
+        material: DIAMOND_BOOTS
+    bonuses:
+      - pieces: 1
+        effects: ["speed:1"]
+      - pieces: 2
+        effects: ["jump_boost:2", "slow_falling:0"]
+
+  winter:
+    name: "<gradient:#aeeaff:#ffffff><bold>Winter"
+    unbreakable: true
+    # Farbe der Lederteile (Hex)
+    color: "#aeeaff"
+    enchants:
+      - protection:5
+      - unbreaking:4
+      - mending:1
+      - thorns:3
+      - feather_falling:4
+    pieces:
+      helmet:
+        material: LEATHER_HELMET
+      chestplate:
+        material: LEATHER_CHESTPLATE
+      leggings:
+        material: LEATHER_LEGGINGS
+      boots:
+        material: LEATHER_BOOTS
+    # Boni, die nur ein bestimmtes Teil gibt
+    piece-bonuses:
+      helmet:
+        # Der Helm macht dich und deine Hitbox 25 % kleiner (0.75 = 75 % der normalen Groesse)
+        scale: 0.75
+        effects: ["night_vision:0"]
+    # Boni, die von der Anzahl der getragenen Teile abhaengen
+    bonuses:
+      - pieces: 2
+        effects: ["speed:0"]
+      - pieces: 4
+        effects: ["speed:1", "resistance:1", "jump_boost:1", "slow_falling:0"]
