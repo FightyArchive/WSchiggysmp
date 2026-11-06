@@ -1,7 +1,10 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -13,62 +16,91 @@
     <artifactId>schiggy-tab</artifactId>
 
     <dependencies>
+
+        <!-- Paper API -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
         </dependency>
+
+        <!-- Schiggy Core -->
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-core</artifactId>
         </dependency>
+
+        <!-- Schiggy Settings -->
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-settings</artifactId>
         </dependency>
+
+        <!-- Schiggy Stats -->
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-stats</artifactId>
         </dependency>
+
+        <!-- Schiggy Economy -->
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-economy</artifactId>
         </dependency>
+
+        <!-- LuckPerms -->
         <dependency>
             <groupId>net.luckperms</groupId>
             <artifactId>api</artifactId>
         </dependency>
+
+        <!-- FoliaBoard -->
         <dependency>
             <groupId>com.github.SpirtySprite.folia-libs</groupId>
             <artifactId>foliaboard-core</artifactId>
             <version>foliaboard-v1.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.foliacommons</groupId>
+                    <artifactId>folia-commons</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+
     </dependencies>
 
     <build>
         <finalName>SchiggyTab</finalName>
+
         <plugins>
+
+            <!-- Maven Shade Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.6.0</version>
+
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
+
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+
                             <relocations>
                                 <relocation>
                                     <pattern>net.foliaboard</pattern>
                                     <shadedPattern>de.schiggy.tab.libs.foliaboard</shadedPattern>
                                 </relocation>
+
                                 <relocation>
                                     <pattern>net.foliacommons</pattern>
                                     <shadedPattern>de.schiggy.tab.libs.foliacommons</shadedPattern>
                                 </relocation>
                             </relocations>
+
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
@@ -79,10 +111,13 @@
                                     </excludes>
                                 </filter>
                             </filters>
+
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
+
 </project>
