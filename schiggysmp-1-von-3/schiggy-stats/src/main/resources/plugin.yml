@@ -1,0 +1,19 @@
+name: SchiggyStats
+version: '${project.version}'
+main: de.schiggy.stats.SchiggyStats
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore, SchiggyEconomy]
+authors: [FightyFinn]
+description: Statistiken (Kills, Tode, Spielzeit) und Bestenlisten (/stats, /leaderboard)
+commands:
+  stats:
+    description: Zeigt deine Statistiken oder die eines anderen Spielers
+    aliases: [stat]
+  leaderboard:
+    description: Bestenlisten für Geld, Kills, Tode und Spielzeit
+    aliases: [lb, top]
+permissions:
+  schiggy.stats.use:
+    description: /stats und /leaderboard benutzen
+    default: true

@@ -1,0 +1,22 @@
+name: SchiggySell
+version: '${project.version}'
+main: de.schiggy.sell.SchiggySell
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore, SchiggyEconomy, SchiggyWorth]
+authors: [FightyFinn]
+description: Items verkaufen mit Verkaufsmenü, Levels und Multiplikatoren (/sell)
+commands:
+  sell:
+    description: Öffnet das Verkaufsmenü
+    aliases: [verkaufen]
+  sellmulti:
+    description: Zeigt dein Verkaufs-Level und deinen Multiplikator
+    aliases: [sellmultiplier]
+  sellhistory:
+    description: Zeigt deine letzten Verkäufe
+    aliases: [verkaufsverlauf]
+permissions:
+  schiggy.sell.use:
+    description: /sell benutzen
+    default: true

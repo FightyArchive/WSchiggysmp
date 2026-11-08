@@ -1,0 +1,20 @@
+name: SchiggyAuction
+version: '${project.version}'
+main: de.schiggy.auction.SchiggyAuction
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore, SchiggyEconomy]
+softdepend: [SchiggySettings, SchiggyWorth]
+authors: [FightyFinn]
+description: Auktionshaus für Spieler (/ah)
+commands:
+  ah:
+    description: Öffnet das Auktionshaus
+    aliases: [auction, auktion]
+permissions:
+  schiggy.auction.use:
+    description: Auktionshaus benutzen
+    default: true
+  schiggy.auction.admin:
+    description: /ah reload benutzen
+    default: op

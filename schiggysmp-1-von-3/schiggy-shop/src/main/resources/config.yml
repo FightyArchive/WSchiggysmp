@@ -1,0 +1,165 @@
+# SchiggyShop
+#
+# Preise sind pro Stueck in normalen Einheiten (Money darf Dezimalstellen haben, Shards sind ganze Zahlen).
+# Aenderungen an dieser Datei uebernimmst du mit /shop reload.
+#
+# Eintraege unter "items":
+#   material:     Item (z. B. DIAMOND_SWORD)
+#   price:        Preis pro Stueck
+#   currency:     money oder shards (Standard: money)
+#   daily-limit:  Wie viele Stueck ein Spieler pro Tag (UTC) maximal kaufen darf (0 oder weglassen = unbegrenzt)
+#   display-name: Eigener Anzeigename (MiniMessage), optional
+#   commands:     Statt eines Items werden diese Konsolen-Befehle ausgefuehrt (z. B. fuer Crate-Schluessel).
+#                 Platzhalter: {player} und {amount}. Das Material dient dann nur als Symbol.
+
+menu:
+  # Zeilen des Hauptmenues (1 bis 6)
+  rows: 3
+
+# Maximale Menge pro Kauf
+max-purchase-amount: 576
+
+categories:
+  blocks:
+    name: "<green><bold>Blöcke"
+    icon: OAK_LOG
+    slot: 11
+    items:
+      - {material: STONE, price: 10}
+      - {material: COBBLESTONE, price: 5}
+      - {material: DIRT, price: 2}
+      - {material: OAK_LOG, price: 20}
+      - {material: SAND, price: 8}
+      - {material: SANDSTONE, price: 12}
+      - {material: GLASS, price: 15}
+      - {material: BRICKS, price: 30}
+      - {material: DEEPSLATE, price: 12}
+      - {material: END_STONE, price: 40}
+      - {material: QUARTZ_BLOCK, price: 60}
+      - {material: OBSIDIAN, price: 400}
+
+  food:
+    name: "<gold><bold>Nahrung"
+    icon: APPLE
+    slot: 15
+    items:
+      - {material: BREAD, price: 25}
+      - {material: BAKED_POTATO, price: 20}
+      - {material: COOKED_CHICKEN, price: 30}
+      - {material: COOKED_SALMON, price: 30}
+      - {material: COOKED_PORKCHOP, price: 40}
+      - {material: COOKED_BEEF, price: 40}
+      - {material: GOLDEN_CARROT, price: 90}
+      - {material: CAKE, price: 100}
+      - {material: GOLDEN_APPLE, price: 800}
+
+  redstone:
+    name: "<red><bold>Redstone"
+    icon: REDSTONE_BLOCK
+    slot: 13
+    items:
+      - {material: REDSTONE, price: 40}
+      - {material: LEVER, price: 15}
+      - {material: REPEATER, price: 90}
+      - {material: COMPARATOR, price: 150}
+      - {material: PISTON, price: 120}
+      - {material: STICKY_PISTON, price: 200}
+      - {material: OBSERVER, price: 150}
+      - {material: DROPPER, price: 120}
+      - {material: DISPENSER, price: 150}
+      - {material: HOPPER, price: 250}
+      - {material: REDSTONE_LAMP, price: 100}
+      - {material: TNT, price: 200}
+
+  pvp:
+    name: "<dark_red><bold>PvP"
+    icon: DIAMOND_CHESTPLATE
+    slot: 14
+    items:
+      - {material: DIAMOND_SWORD, price: 1500}
+      - {material: DIAMOND_HELMET, price: 3500}
+      - {material: DIAMOND_CHESTPLATE, price: 5500}
+      - {material: DIAMOND_LEGGINGS, price: 5000}
+      - {material: DIAMOND_BOOTS, price: 2800}
+      - {material: SHIELD, price: 400}
+      - {material: BOW, price: 300}
+      - {material: ARROW, price: 10}
+      - {material: ENDER_PEARL, price: 120}
+      - {material: GOLDEN_APPLE, price: 800}
+      - {material: EXPERIENCE_BOTTLE, price: 150}
+      - {material: FIREWORK_ROCKET, price: 60}
+      - {material: TOTEM_OF_UNDYING, price: 5000, daily-limit: 5}
+
+  special:
+    name: "<light_purple><bold>Spezial <gray>(Shards)"
+    icon: END_PORTAL_FRAME
+    slot: 12
+    items:
+      - {material: NETHERITE_INGOT, price: 250, currency: shards, daily-limit: 2}
+      - {material: ENCHANTED_GOLDEN_APPLE, price: 120, currency: shards, daily-limit: 5}
+      - {material: ELYTRA, price: 600, currency: shards, daily-limit: 1}
+      - {material: BEACON, price: 400, currency: shards, daily-limit: 2}
+      - {material: ZOMBIE_SPAWN_EGG, price: 40, currency: shards}
+      - {material: SKELETON_SPAWN_EGG, price: 40, currency: shards}
+      - {material: CREEPER_SPAWN_EGG, price: 60, currency: shards}
+      # Beispiel fuer einen Crate-Schluessel (entfernen oder an dein Crate-Plugin anpassen):
+      # - material: TRIPWIRE_HOOK
+      #   price: 100
+      #   currency: shards
+      #   display-name: "<gold><bold>Vote-Crate-Schlüssel"
+      #   commands:
+      #     - "crate give {player} vote {amount}"
+
+  spawners:
+    name: "<dark_green><bold>Spawner"
+    icon: SPAWNER
+    slot: 16
+    items:
+      - material: SPAWNER
+        display-name: "<green><bold>Zombie Spawner"
+        price: 25000
+        currency: money
+        commands:
+          - "spawner give {player} ZOMBIE {amount}"
+      - material: SPAWNER
+        display-name: "<green><bold>Skeleton Spawner"
+        price: 25000
+        currency: money
+        commands:
+          - "spawner give {player} SKELETON {amount}"
+      - material: SPAWNER
+        display-name: "<green><bold>Spider Spawner"
+        price: 25000
+        currency: money
+        commands:
+          - "spawner give {player} SPIDER {amount}"
+      - material: SPAWNER
+        display-name: "<green><bold>Creeper Spawner"
+        price: 35000
+        currency: money
+        commands:
+          - "spawner give {player} CREEPER {amount}"
+      - material: SPAWNER
+        display-name: "<green><bold>Cow Spawner"
+        price: 15000
+        currency: money
+        commands:
+          - "spawner give {player} COW {amount}"
+      - material: SPAWNER
+        display-name: "<green><bold>Enderman Spawner"
+        price: 70000
+        currency: money
+        commands:
+          - "spawner give {player} ENDERMAN {amount}"
+      - material: SPAWNER
+        display-name: "<green><bold>Blaze Spawner"
+        price: 400
+        currency: shards
+        commands:
+          - "spawner give {player} BLAZE {amount}"
+      - material: SPAWNER
+        display-name: "<green><bold>Iron Golem Spawner"
+        price: 500
+        currency: shards
+        commands:
+          - "spawner give {player} IRON_GOLEM {amount}"

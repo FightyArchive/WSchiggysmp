@@ -1,0 +1,7 @@
+# SchiggyStats
+#
+# Gezaehlt werden Kills (ein Spieler toetet einen anderen Spieler), Tode (jeder Tod) und die Spielzeit.
+# Die Werte stehen in der Datenbank und werden jede Minute gespeichert.
+
+# So oft (in Sekunden) die Spielzeit und alle Werte gespeichert werden
+save-interval-seconds: 60
