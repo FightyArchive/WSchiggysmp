@@ -14,6 +14,13 @@
 
     <artifactId>schiggy-tab</artifactId>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>io.papermc.paper</groupId>
@@ -46,9 +53,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.SpirtySprite.folia-libs</groupId>
-            <artifactId>foliaboard-core</artifactId>
-            <version>foliaboard-v1.3.0</version>
+            <groupId>com.github.SpirtySprite</groupId>
+            <artifactId>FoliaBoard-API</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
@@ -73,10 +80,6 @@
                                 <relocation>
                                     <pattern>net.foliaboard</pattern>
                                     <shadedPattern>de.schiggy.tab.libs.foliaboard</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>net.foliacommons</pattern>
-                                    <shadedPattern>de.schiggy.tab.libs.foliacommons</shadedPattern>
                                 </relocation>
                             </relocations>
 
