@@ -52,10 +52,11 @@
             <artifactId>api</artifactId>
         </dependency>
 
+        <!-- FoliaBoard API -->
         <dependency>
-            <groupId>com.github.SpirtySprite</groupId>
-            <artifactId>FoliaBoard-API</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.github.SpirtySprite.ScoreboardAPI-FOLIA</groupId>
+            <artifactId>foliaboard-core</artifactId>
+            <version>1.0.3</version>
         </dependency>
     </dependencies>
 
