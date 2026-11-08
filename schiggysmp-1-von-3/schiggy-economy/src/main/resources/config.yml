@@ -1,0 +1,36 @@
+# SchiggyEconomy
+# Betraege hier sind in normalen Einheiten (Money darf Dezimalstellen haben, Shards sind ganze Zahlen).
+
+# Startguthaben fuer Spieler, die zum ersten Mal beitreten
+start-balance:
+  money: 0
+  shards: 0
+
+limits:
+  # Maximales Guthaben pro Spieler
+  max-balance:
+    money: 1000000000000
+    shards: 1000000000
+  # Limits fuer /pay (max: 0 = kein Hoechstbetrag)
+  pay:
+    min: 1
+    max: 0
+
+# Anzeige der Betraege. {amount} wird durch die formatierte Zahl ersetzt.
+# locale: en-US ergibt 1,234.50 / de-DE ergibt 1.234,50
+format:
+  locale: "en-US"
+  money: "${amount}"
+  shards: "{amount} Shards"
+
+baltop:
+  # Wie viele Plaetze gespeichert werden (10 pro Seite)
+  entries: 50
+  # Wie oft die Liste neu berechnet wird (Sekunden, mindestens 10)
+  refresh-seconds: 60
+
+# Protokoll aller Transaktionen (Tabelle fe_log in plugins/SchiggyCore/schiggy.db)
+transaction-log:
+  enabled: true
+  # Eintraege aelter als X Tage werden beim Start geloescht (0 = nie)
+  retention-days: 30
