@@ -1,0 +1,22 @@
+name: SchiggyCombat
+version: '${project.version}'
+main: de.schiggy.combat.SchiggyCombat
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore]
+softdepend: [SchiggyStats]
+authors: [FightyFinn]
+description: Combat-System - Combat Tag, gesperrte Befehle und Teleports, Combat-Log-Schutz
+commands:
+  combat:
+    description: Zeigt deinen Combat-Status (/combat status, /combat remove, /combat reload)
+permissions:
+  schiggy.combat.use:
+    description: /combat und /combat status benutzen
+    default: true
+  schiggy.combat.bypass:
+    description: Bekommt keinen Combat Tag und wird nicht eingeschraenkt
+    default: op
+  schiggy.combat.admin:
+    description: /combat status [Spieler], /combat remove und /combat reload
+    default: op

@@ -1,0 +1,17 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+usage: "{prefix}<gray>Benutzung: <white>/armor give [Spieler] [Set] [helmet|chestplate|leggings|boots|all]</white><gray>, <white>/armor list</white> <gray>oder <white>/armor reload"
+player-offline: "{prefix}<red>Der Spieler ist nicht online."
+unknown-set: "{prefix}<red>Das Set <white>{set}</white> gibt es nicht. Vorhandene Sets: <white>{sets}</white>"
+unknown-piece: "{prefix}<red>Unbekanntes Teil <white>{piece}</white>. Erlaubt: helmet, chestplate, leggings, boots, all."
+given: "{prefix}<gray><white>{player}</white> hat <white>{count}</white> Teil(e) vom Set <white>{set}</white> <gray>erhalten."
+received: "{prefix}<green>Du hast Teile des Sets <white>{set}</white> <green>erhalten."
+list-header: "{prefix}<gold>Rüstungs-Sets:"
+list-line: "<gray> - <white>{id}</white> <dark_gray>({pieces} Teile)"
+reloaded: "{prefix}<green>SchiggyArmor wurde neu geladen (<white>{count}</white> Sets)."
+
+item-lore-header: "<gray>Set: {set}"
+item-lore-bonus: "<gray>{pieces} Teil(e): <white>{effects}"
+item-lore-scale: "<gray>Größe und Hitbox: <white>{percent}%"
+item-lore-piece: "<gray>Dieses Teil: <white>{effects}"

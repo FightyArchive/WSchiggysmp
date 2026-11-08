@@ -1,0 +1,16 @@
+name: SchiggyGamble
+version: '${project.version}'
+main: de.schiggy.gamble.SchiggyGamble
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore, SchiggyEconomy]
+authors: [FightyFinn]
+description: Investieren - lege Geld an und bekomme jede Sekunde einen Teil davon (/invest)
+commands:
+  invest:
+    description: Öffnet das Investitions-Menü
+    aliases: [investieren]
+permissions:
+  schiggy.gamble.invest:
+    description: /invest benutzen
+    default: true

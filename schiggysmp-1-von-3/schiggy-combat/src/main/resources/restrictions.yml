@@ -1,0 +1,21 @@
+# SchiggyCombat - Einschraenkungen waehrend des Combats
+
+# Diese Befehle sind gesperrt (ohne Schraegstrich). Aliase eines Befehls sind automatisch mit gesperrt.
+blocked-commands:
+  - spawn
+  - home
+  - homes
+  - tpa
+  - tpahere
+  - tpaccept
+  - rtp
+  - rtpq
+  - back
+  - duel
+  - warp
+
+# Teleports ueber andere Plugins oder Befehle: gesperrt, wenn die Ursache in dieser Liste steht.
+# Moegliche Ursachen: COMMAND, PLUGIN, ENDER_PEARL, CHORUS_FRUIT, NETHER_PORTAL, END_PORTAL, END_GATEWAY, SPECTATE, UNKNOWN
+blocked-teleport-causes:
+  - COMMAND
+  - PLUGIN

@@ -1,0 +1,19 @@
+# SchiggyGamble - /invest
+#
+# Wer Geld investiert, bekommt JEDE SEKUNDE einen Prozentsatz davon auf sein Konto (solange er online ist).
+# Das investierte Geld bleibt angelegt und kann jederzeit mit /invest withdraw zurueckgeholt werden.
+#
+# ACHTUNG: Bei 1 % pro Sekunde verdoppelt sich das Geld nach rund 100 Sekunden. Das ist sehr stark.
+# Wenn es deiner Wirtschaft zu viel wird, senke "rate-percent-per-second" (z. B. 0.01) oder "max-total".
+
+# Prozent des investierten Betrags, die jede Sekunde ausgezahlt werden
+rate-percent-per-second: 1.0
+
+# Wie viel ein Spieler insgesamt investiert haben darf (normale Einheiten)
+max-total: 1000000
+
+# Kleinster Betrag pro Einzahlung
+min-amount: 100
+
+# Die Betraege der Schnellwahl-Knoepfe im Menue (maximal 4)
+amounts: [1000, 10000, 100000, 500000]

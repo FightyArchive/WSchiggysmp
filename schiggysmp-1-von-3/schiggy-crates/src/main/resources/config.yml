@@ -1,0 +1,93 @@
+# SchiggyCrates - Auswahl-Crates wie auf DonutSMP
+#
+# Ablauf fuer Spieler:
+#   1. Linksklick auf die Crate = Vorschau der Belohnungen (ohne Schluessel).
+#   2. Rechtsklick = Crate oeffnen. Der Spieler waehlt EINE Belohnung aus und bestaetigt.
+#      Erst bei der Bestaetigung wird ein Schluessel verbraucht.
+#   3. Hat der Spieler mehrere Schluessel, kann er im Bestaetigungs-Menue "Alle einloesen" waehlen
+#      (so oft, wie Schluessel und Platz im Inventar da sind).
+#
+# Schluessel sind virtuell. Vergib sie mit /crate give [Spieler] [Crate] [Anzahl], zum Beispiel auch aus dem
+# Shop (siehe SchiggyShop, "commands").
+# Als Admin schaust du einen Block an und gibst /crate set [Crate] ein: Dieser Block ist dann die Crate.
+#
+# Eine Crate:
+#   name:   Anzeigename (MiniMessage)       icon:  Symbol (Item)
+#   offer:  all = alle Belohnungen zur Auswahl, oder eine Zahl N = N zufaellige (gewichtet nach "chance")
+#   rewards:
+#     material/amount:  Item und Anzahl       name/lore: optional (MiniMessage)
+#     commands:         statt eines Items werden Konsolen-Befehle ausgefuehrt ({player}), icon = Symbol
+#     chance:           nur wichtig bei "offer: Zahl" (Gewicht), sonst egal
+#     broadcast:        true = die Wahl wird allen im Chat gezeigt
+settings:
+  # Ohne Schluessel zeigt ein Rechtsklick die Vorschau statt nur eine Fehlermeldung
+  open-without-key-preview: true
+  # So viele Schluessel werden mit "Alle einloesen" maximal auf einmal verbraucht
+  max-claim-all: 36
+
+crates:
+  vote:
+    name: "<green><bold>Vote Crate"
+    icon: TRIPWIRE_HOOK
+    offer: all
+    rewards:
+      - {material: DIAMOND, amount: 16}
+      - {material: GOLDEN_APPLE, amount: 16}
+      - {material: EXPERIENCE_BOTTLE, amount: 64}
+      - {material: IRON_BLOCK, amount: 32}
+      - {material: ENDER_PEARL, amount: 16}
+      - {material: NETHERITE_INGOT, amount: 1, broadcast: true}
+
+  rare:
+    name: "<aqua><bold>Rare Crate"
+    icon: ENDER_CHEST
+    offer: all
+    rewards:
+      - {material: DIAMOND_BLOCK, amount: 16}
+      - {material: ENCHANTED_GOLDEN_APPLE, amount: 4}
+      - {material: NETHERITE_SCRAP, amount: 8}
+      - {material: TOTEM_OF_UNDYING, amount: 2}
+      - {material: NETHERITE_INGOT, amount: 4, broadcast: true}
+      - {material: ELYTRA, amount: 1, broadcast: true}
+      - {material: BEACON, amount: 1}
+
+  legendary:
+    name: "<gradient:#ff5500:#ffaa00><bold>Legendary Crate"
+    icon: NETHER_STAR
+    # Hier sieht der Spieler bei jedem Oeffnen nur 5 zufaellige Belohnungen aus dem Pool
+    offer: 5
+    rewards:
+      - {chance: 40, material: NETHERITE_INGOT, amount: 8}
+      - {chance: 30, material: DIAMOND_BLOCK, amount: 32}
+      - {chance: 20, material: ENCHANTED_GOLDEN_APPLE, amount: 16}
+      - {chance: 15, material: TOTEM_OF_UNDYING, amount: 4, broadcast: true}
+      - {chance: 10, material: ELYTRA, amount: 1, broadcast: true}
+      - {chance: 10, material: BEACON, amount: 4}
+      - {chance: 5, material: NETHERITE_BLOCK, amount: 1, name: "<light_purple><bold>Netherite-Block", broadcast: true}
+      # Beispiel fuer eine Belohnung mit Befehl (entfernen oder anpassen):
+      # - icon: GOLD_INGOT
+      #   name: "<yellow>10.000 Geld"
+      #   commands:
+      #     - "eco give {player} money 10000"
+
+  common:
+    name: "<white><bold>Common Crate"
+    icon: CHEST
+    offer: all
+    rewards:
+      - {material: IRON_INGOT, amount: 32}
+      - {material: GOLD_INGOT, amount: 24}
+      - {material: DIAMOND, amount: 8}
+      - {material: GOLDEN_APPLE, amount: 8}
+      - {material: EXPERIENCE_BOTTLE, amount: 32}
+
+  amethyst:
+    name: "<light_purple><bold>Amethyst Crate"
+    icon: AMETHYST_CLUSTER
+    offer: all
+    rewards:
+      - {material: AMETHYST_SHARD, amount: 64}
+      - {material: DIAMOND_BLOCK, amount: 8}
+      - {material: NETHERITE_SCRAP, amount: 4}
+      - {material: ENCHANTED_GOLDEN_APPLE, amount: 2}
+      - {material: TOTEM_OF_UNDYING, amount: 1, broadcast: true}

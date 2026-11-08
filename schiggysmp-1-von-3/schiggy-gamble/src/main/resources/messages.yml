@@ -1,0 +1,35 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+players-only: "{prefix}<red>Dieser Befehl ist nur für Spieler."
+error: "{prefix}<red>Es ist ein Fehler aufgetreten. Dir wurde nichts berechnet."
+usage: "{prefix}<gray>Benutzung: <white>/invest</white><gray>, <white>/invest [Betrag]</white> <gray>oder <white>/invest withdraw [Betrag|all]"
+
+invalid-amount: "{prefix}<red>Ungültiger Betrag. Beispiele: <white>5000</white>, <white>25k</white>, <white>1m</white>"
+amount-too-small: "{prefix}<red>Der kleinste Betrag ist <white>{min}</white>."
+too-much: "{prefix}<red>Du darfst insgesamt höchstens <white>{max}</white> investieren. Du hast schon <white>{current}</white> angelegt."
+no-money: "{prefix}<red>Du hast nicht genug Geld. Du brauchst <white>{amount}</white>."
+invested: "{prefix}<green>Du hast <white>{amount}</white> <green>investiert. Insgesamt angelegt: <white>{total}</white> <dark_gray>(+{income}/s)"
+withdrawn: "{prefix}<green>Du hast <white>{amount}</white> <green>abgehoben. Noch angelegt: <white>{total}"
+nothing-invested: "{prefix}<red>Du hast kein Geld investiert."
+not-enough-invested: "{prefix}<red>So viel hast du nicht angelegt. Angelegt: <white>{total}"
+
+gui-title: "<dark_gray><underlined>Investieren"
+gui-tier-name: "<gold><bold>{amount} investieren"
+gui-tier-lore:
+  - "<gray>Du bekommst jede Sekunde <green>{percent}%</green>"
+  - "<gray>des angelegten Geldes."
+  - ""
+  - "<yellow>Klicke zum Investieren"
+gui-status-name: "<aqua><bold>Dein Investment"
+gui-status-lore:
+  - "<gray>Angelegt: <white>{total}"
+  - "<gray>Pro Sekunde: <green>+{income}"
+  - "<gray>Pro Minute: <green>+{income_minute}"
+  - "<gray>Rate: <white>{percent}% pro Sekunde"
+gui-withdraw-all-name: "<red><bold>Alles abheben"
+gui-withdraw-all-lore:
+  - "<gray>Du bekommst <white>{total}</white> zurück."
+gui-withdraw-half-name: "<yellow><bold>Die Hälfte abheben"
+gui-withdraw-half-lore:
+  - "<gray>Du bekommst <white>{half}</white> zurück."

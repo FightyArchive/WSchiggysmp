@@ -1,0 +1,12 @@
+# SchiggyKits
+#
+# Zugriff pro Kit ueber LuckPerms-Rechte: schiggy.kit.<kitname>  (z. B. schiggy.kit.starter)
+# Mit schiggy.kit.* bekommt ein Rang alle Kits.
+# Die Kits in dieser Liste darf jeder Spieler benutzen, ohne dass ein Recht noetig ist.
+free-kits:
+  - starter
+
+# Wartezeit pro Rang (LuckPerms): schiggy.kit.cooldown.<kitname>.<Zeit> oder schiggy.kit.cooldown.all.<Zeit>
+# Zeit z. B. 30m, 12h, 1d oder 0 (keine Wartezeit). Die niedrigste passende Zeit gilt.
+# Beispiel: /lp group vip permission set schiggy.kit.cooldown.all.6h true
+# Welche Kits ein Rang benutzen darf, stellst du mit schiggy.kit.<kitname> ein.
