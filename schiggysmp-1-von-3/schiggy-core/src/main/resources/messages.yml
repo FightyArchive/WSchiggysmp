@@ -1,8 +1,0 @@
-prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
-
-no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
-info-header: "{prefix}<gold>SchiggyCore <white>v{version}"
-info-plugin-active: "<gray> - <white>{name} <dark_gray>v{version} <gray>(<green>aktiv</green>)"
-info-plugin-inactive: "<gray> - <white>{name} <dark_gray>v{version} <gray>(<red>deaktiviert</red>)"
-reloaded: "{prefix}<green>Die Nachrichten von <white>{count}</white> Schiggy-Plugins wurden neu geladen."
-usage: "{prefix}<gray>Benutzung: <white>/schiggycore</white> <gray>oder <white>/schiggycore reload"

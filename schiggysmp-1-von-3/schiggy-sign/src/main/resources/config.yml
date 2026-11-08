@@ -1,6 +1,0 @@
-# SchiggySign
-#
-# So sieht die Zeile aus, die direkt unter dem Item-Namen steht (MiniMessage).
-# {prefix} = dein LuckPerms-Prefix (mit Leerzeichen am Ende, leer ohne Prefix)
-# {player} = dein Name
-format: "<gray>Signiert von {prefix}<white>{player}"
