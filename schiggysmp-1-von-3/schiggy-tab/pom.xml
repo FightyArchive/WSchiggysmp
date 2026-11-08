@@ -1,7 +1,9 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -17,26 +19,32 @@
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-core</artifactId>
         </dependency>
+
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-settings</artifactId>
         </dependency>
+
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-stats</artifactId>
         </dependency>
+
         <dependency>
             <groupId>de.schiggy</groupId>
             <artifactId>schiggy-economy</artifactId>
         </dependency>
+
         <dependency>
             <groupId>net.luckperms</groupId>
             <artifactId>api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.github.SpirtySprite.folia-libs</groupId>
             <artifactId>foliaboard-core</artifactId>
@@ -46,6 +54,7 @@
 
     <build>
         <finalName>SchiggyTab</finalName>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -59,6 +68,7 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+
                             <relocations>
                                 <relocation>
                                     <pattern>net.foliaboard</pattern>
@@ -69,6 +79,7 @@
                                     <shadedPattern>de.schiggy.tab.libs.foliacommons</shadedPattern>
                                 </relocation>
                             </relocations>
+
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
