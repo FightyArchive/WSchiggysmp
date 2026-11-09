@@ -1,0 +1,50 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+players-only: "{prefix}<red>Dieser Befehl ist nur für Spieler."
+error: "{prefix}<red>Es ist ein Fehler aufgetreten. Bitte melde das einem Admin."
+load-failed: "<red>Dein Kontostand konnte nicht geladen werden. Bitte versuche es gleich noch einmal."
+player-not-found: "{prefix}<red>Spieler <white>{player}</white> wurde nicht gefunden."
+invalid-amount: "{prefix}<red>Ungültiger Betrag. Beispiele: <white>100</white>, <white>2.5k</white>, <white>1m</white>"
+invalid-currency: "{prefix}<red>Unbekannte Währung. Erlaubt: <white>money</white>, <white>shards</white>"
+limit-exceeded: "{prefix}<red>Das Limit für den Kontostand würde überschritten."
+
+balance-self-money: "{prefix}<gray>Dein Kontostand: <green>{amount}"
+balance-other-money: "{prefix}<gray>Kontostand von <white>{player}</white>: <green>{amount}"
+balance-self-shards: "{prefix}<gray>Deine Gems: <light_purple>{amount}"
+balance-other-shards: "{prefix}<gray>Gems von <white>{player}</white>: <light_purple>{amount}"
+
+pay-usage: "{prefix}<gray>Benutzung: <white>/pay [Spieler] [Betrag]"
+pay-sent: "{prefix}<gray>Du hast <white>{player}</white> <green>{amount}</green> gesendet."
+pay-received: "{prefix}<white>{player}</white> <gray>hat dir <green>{amount}</green> gesendet."
+pay-self: "{prefix}<red>Du kannst dir nicht selbst Geld senden."
+pay-too-low: "{prefix}<red>Der Mindestbetrag ist <white>{amount}</white>."
+pay-too-high: "{prefix}<red>Der Höchstbetrag ist <white>{amount}</white>."
+insufficient-funds: "{prefix}<red>Du hast nicht genug Geld."
+receiver-limit: "{prefix}<red>Der Empfänger kann so viel nicht mehr halten."
+
+baltop-header: "<gold><bold>Reichste Spieler</bold> <gray>(Seite {page}/{pages})"
+baltop-line: "<yellow>#{rank} <white>{player} <dark_gray>- <green>{amount}"
+baltop-footer: "<gray>Nächste Seite: <white>/baltop {next}"
+baltop-empty: "{prefix}<gray>Es gibt noch keine Einträge."
+
+eco-usage: "{prefix}<gray>Benutzung: <white>/eco [give|take|set] [Spieler] [money|shards] [Betrag]</white> <gray>oder <white>/eco reload"
+eco-give: "{prefix}<white>{player}</white> <gray>hat <green>{amount}</green> <gray>erhalten. Neuer Stand: <white>{balance}"
+eco-take: "{prefix}<white>{player}</white> <gray>wurden <red>{amount}</red> <gray>abgezogen. Neuer Stand: <white>{balance}"
+eco-set: "{prefix}<white>{player}</white> <gray>hat jetzt <green>{amount}"
+eco-insufficient: "{prefix}<red>{player} hat nicht genug, um das abzuziehen."
+reloaded: "{prefix}<green>SchiggyEconomy wurde neu geladen."
+
+# ---------------- Bestätigung für /pay ----------------
+pay-confirm-title: "<dark_gray><underlined>Zahlung bestätigen"
+pay-cancelled: "{prefix}<gray>Zahlung abgebrochen."
+gui-pay-head-name: "<white><bold>{player}"
+gui-pay-head-lore:
+  - "<gray>Empfänger: <white>{player}"
+  - "<gray>Betrag: <green><bold>{amount}"
+gui-pay-confirm-name: "<green><bold>Bestätigen"
+gui-pay-confirm-lore:
+  - "<gray>{amount} an <white>{player}</white> senden"
+gui-pay-cancel-name: "<red><bold>Abbrechen"
+gui-pay-cancel-lore:
+  - "<gray>Es wird nichts gesendet."

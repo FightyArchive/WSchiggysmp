@@ -1,0 +1,19 @@
+name: SchiggySettings
+version: '${project.version}'
+main: de.schiggy.settings.SchiggySettings
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore]
+authors: [FightyFinn]
+description: Persönliche Einstellungen jedes Spielers (/settings)
+commands:
+  settings:
+    description: Öffnet deine persönlichen Einstellungen
+    aliases: [einstellungen, toggles]
+permissions:
+  schiggy.settings.use:
+    description: /settings benutzen
+    default: true
+  schiggy.settings.bypass:
+    description: Darf Spielern auch private Nachrichten senden, die diese ausgeschaltet haben
+    default: op

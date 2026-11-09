@@ -1,0 +1,85 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+players-only: "{prefix}<red>Dieser Befehl ist nur für Spieler."
+player-offline: "{prefix}<red>Der Spieler ist nicht online."
+cooldown: "{prefix}<red>Bitte warte noch <white>{seconds}</white> Sekunden."
+
+tpa-usage: "{prefix}<gray>Benutzung: <white>/{command} [Spieler]"
+tpa-self: "{prefix}<red>Du kannst dir nicht selbst eine Anfrage senden."
+tpa-disabled: "{prefix}<red><white>{player}</white> nimmt gerade keine Teleport-Anfragen an."
+tpa-sent: "{prefix}<gray>Anfrage an <white>{player}</white> gesendet. Sie läuft in <white>{seconds}</white> Sekunden ab."
+tpahere-sent: "{prefix}<gray>Anfrage an <white>{player}</white> gesendet, sich zu dir zu teleportieren. Sie läuft in <white>{seconds}</white> Sekunden ab."
+tpa-received: "{prefix}<white>{player}</white> <gray>möchte sich zu dir teleportieren. <click:run_command:'/tpaccept'><green><bold>[Annehmen]</bold></green></click> <click:run_command:'/tpdeny {player}'><red><bold>[Ablehnen]</bold></red></click>"
+tpahere-received: "{prefix}<white>{player}</white> <gray>möchte, dass du dich zu ihm teleportierst. <click:run_command:'/tpaccept'><green><bold>[Annehmen]</bold></green></click> <click:run_command:'/tpdeny {player}'><red><bold>[Ablehnen]</bold></red></click>"
+no-request: "{prefix}<red>Du hast keine offene Teleport-Anfrage."
+no-request-from: "{prefix}<red>Du hast keine Anfrage von <white>{player}</white>."
+tpa-accepted: "{prefix}<white>{player}</white> <green>hat deine Anfrage angenommen."
+tpa-accepted-self: "{prefix}<gray>Du hast die Anfrage von <white>{player}</white> <green>angenommen</green>."
+tpa-denied: "{prefix}<white>{player}</white> <red>hat deine Anfrage abgelehnt."
+tpa-denied-self: "{prefix}<gray>Du hast die Anfrage von <white>{player}</white> <red>abgelehnt</red>."
+
+teleport-warmup: "{prefix}<gray>Teleport in <white>{seconds}</white> Sekunden. <red>Nicht bewegen!"
+teleport-countdown: "<gray>Teleport in <white>{seconds}</white>..."
+teleport-success: "{prefix}<green>Teleportiert!"
+teleport-cancelled: "{prefix}<red>Teleport abgebrochen, weil du dich bewegt hast."
+teleport-unsafe: "{prefix}<red>Der Zielort ist nicht sicher."
+teleport-failed: "{prefix}<red>Der Teleport ist fehlgeschlagen."
+teleport-pending: "{prefix}<red>Du wirst bereits teleportiert."
+
+rtp-world-blocked: "{prefix}<red>Dieses Ziel ist nicht verfügbar. Mögliche Ziele: <white>overworld</white>, <white>nether</white>, <white>end</white>."
+rtp-searching: "{prefix}<gray>Suche einen sicheren Ort..."
+rtp-failed: "{prefix}<red>Es wurde kein sicherer Ort gefunden. Versuche es gleich noch einmal."
+
+# ---------------- Menü /rtp ----------------
+gui-rtp-title: "<dark_gray>Zufälliger Teleport"
+gui-rtp-hint: "<yellow>Klicke, um dich zu teleportieren"
+gui-rtp-unavailable-name: "<red><bold>Nicht verfügbar"
+gui-rtp-unavailable-lore:
+  - "<gray>Diese Welt ist nicht geladen"
+  - "<gray>oder ausgeschaltet."
+
+gui-rtp-overworld-name: "<green><bold>Oberwelt"
+gui-rtp-overworld-lore:
+  - "<gray>Zufälliger Ort in der Oberwelt."
+  - "<gray>Entfernung: <white>{min}<gray> bis <white>{max}<gray> Blöcke"
+  - ""
+  - "<yellow>Klicke, um dich zu teleportieren"
+
+gui-rtp-nether-name: "<red><bold>Nether"
+gui-rtp-nether-lore:
+  - "<gray>Zufälliger Ort im Nether."
+  - "<gray>Entfernung: <white>{min}<gray> bis <white>{max}<gray> Blöcke"
+  - ""
+  - "<yellow>Klicke, um dich zu teleportieren"
+
+gui-rtp-end-name: "<light_purple><bold>End"
+gui-rtp-end-lore:
+  - "<gray>Zufälliger Ort im End."
+  - "<gray>Entfernung: <white>{min}<gray> bis <white>{max}<gray> Blöcke"
+  - ""
+  - "<yellow>Klicke, um dich zu teleportieren"
+
+# ---------------- Menü /tpaccept ----------------
+gui-accept-title: "<dark_gray><underlined>Teleport-Anfrage"
+gui-accept-head-name: "<white><bold>{player}"
+gui-accept-head-lore:
+  - "<gray>Möchte sich <white>zu dir</white> teleportieren."
+  - ""
+  - "<gray>Name: <white>{player}"
+  - "<gray>Welt: <white>{world}"
+  - "<gray>Fliegt: {flying}"
+gui-accept-head-lore-here:
+  - "<gray>Möchte, dass du dich <white>zu ihm</white> teleportierst."
+  - ""
+  - "<gray>Name: <white>{player}"
+  - "<gray>Welt: <white>{world}"
+  - "<gray>Fliegt: {flying}"
+gui-yes: "<green>Ja"
+gui-no: "<red>Nein"
+gui-accept-confirm-name: "<green><bold>Annehmen"
+gui-accept-confirm-lore:
+  - "<gray>Anfrage von <white>{player}</white> annehmen"
+gui-accept-deny-name: "<red><bold>Ablehnen"
+gui-accept-deny-lore:
+  - "<gray>Anfrage von <white>{player}</white> ablehnen"

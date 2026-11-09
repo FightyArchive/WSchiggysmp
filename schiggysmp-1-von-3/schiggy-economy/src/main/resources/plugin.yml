@@ -1,0 +1,39 @@
+name: SchiggyEconomy
+version: '${project.version}'
+main: de.schiggy.economy.SchiggyEconomy
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore]
+softdepend: [SchiggySettings]
+authors: [FightyFinn]
+description: Geldsystem mit Money und Gems (/bal, /baltop, /pay, /eco)
+commands:
+  balance:
+    description: Zeigt deinen Kontostand
+    aliases: [bal, money]
+  shards:
+    description: Zeigt deine Gems
+    aliases: [shard, gems, gem]
+  baltop:
+    description: Die reichsten Spieler
+    aliases: [balancetop, topmoney]
+  pay:
+    description: Sende Geld an einen anderen Spieler
+  eco:
+    description: Admin-Befehl zum Vergeben, Entfernen und Setzen von Geld
+permissions:
+  schiggy.economy.balance:
+    description: /bal und /shards fuer den eigenen Kontostand
+    default: true
+  schiggy.economy.balance.others:
+    description: Kontostand anderer Spieler ansehen
+    default: true
+  schiggy.economy.pay:
+    description: /pay benutzen
+    default: true
+  schiggy.economy.baltop:
+    description: /baltop benutzen
+    default: true
+  schiggy.economy.admin:
+    description: /eco benutzen
+    default: op
