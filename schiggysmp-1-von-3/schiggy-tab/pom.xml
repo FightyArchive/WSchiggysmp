@@ -60,7 +60,6 @@
 
     <build>
         <finalName>SchiggyTab</finalName>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -74,8 +73,31 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-
                             <relocations>
                                 <relocation>
                                     <pattern>net.foliaboard</pattern>
-                                    <shadedPattern>de.schiggy.tab.libs.f
+                                    <shadedPattern>de.schiggy.tab.libs.foliaboard</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>net.foliacommons</pattern>
+                                    <shadedPattern>de.schiggy.tab.libs.foliacommons</shadedPattern>
+                                </relocation>
+                            </relocations>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
