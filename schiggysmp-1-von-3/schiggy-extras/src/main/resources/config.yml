@@ -1,0 +1,108 @@
+# SchiggyExtras - Spawner und Amethyst-Werkzeuge
+# (Chain Sword, Stun Mace, Duell und RTPQ kommen in dieselbe Datei.)
+
+# ======================================================================= Werkzeuge
+tools:
+  # Uses pro Werkzeug. Das Item merkt sich seine Uses selbst, auch ueber Neustarts.
+  tree_chopper:
+    uses: 3000
+    # Maximale Anzahl Bloecke pro Baum
+    max-blocks: 400
+    # true: Es wird nur gefaellt, wenn Blaetter am Baum haengen (verhindert, dass Holzbauten abgebaut werden)
+    require-leaves: true
+  drill_3x3:
+    uses: 3000
+  drill_3x3x3:
+    uses: 3000
+  sell_axe:
+    uses: 500
+    # Verkaufspreis pro Item (normale Einheiten). Alle Holzstaemme ohne eigenen Preis bekommen den Standardpreis.
+    default-price: 3.0
+    prices:
+      OAK_LOG: 3.0
+      SPRUCE_LOG: 3.0
+      BIRCH_LOG: 3.0
+      JUNGLE_LOG: 3.0
+      ACACIA_LOG: 3.0
+      DARK_OAK_LOG: 3.0
+      MANGROVE_LOG: 3.5
+      CHERRY_LOG: 4.0
+      CRIMSON_STEM: 4.0
+      WARPED_STEM: 4.0
+  shovel_3x3:
+    uses: 3000
+  sell_wand:
+    uses: 500
+    # Bereich um den angeklickten Block: Breite und Tiefe (10 = 10x10), Hoehe nach oben und unten
+    size: 10
+    vertical: 10
+
+# ======================================================================= Spawner
+spawners:
+  # Wie oft die virtuelle Produktion berechnet wird (Sekunden)
+  interval-seconds: 5
+  # Maximale Anzahl gestapelter Spawner pro Block
+  max-stack: 1000
+  # Maximale Anzahl Spawner-Bloecke pro Spieler
+  max-per-player: 50
+  # Maximale Anzahl gelagerter Items pro Spawner
+  max-storage: 20000
+  # Was jeder Mob produziert:
+  #   seconds: Sekunden, bis ein Spawner (Stack 1) einen Mob "produziert"
+  #   xp:      Erfahrung pro Mob
+  #   value:   Verkaufswert des Spawners (normale Einheiten) fuer die Sell Wand
+  #   drops:   material, min, max, chance (1.0 = immer)
+  mobs:
+    ZOMBIE:
+      seconds: 20
+      xp: 5
+      value: 15000
+      drops:
+        - {material: ROTTEN_FLESH, min: 0, max: 2, chance: 1.0}
+        - {material: IRON_INGOT, min: 1, max: 1, chance: 0.03}
+    SKELETON:
+      seconds: 20
+      xp: 5
+      value: 15000
+      drops:
+        - {material: BONE, min: 0, max: 2, chance: 1.0}
+        - {material: ARROW, min: 0, max: 2, chance: 1.0}
+    SPIDER:
+      seconds: 20
+      xp: 5
+      value: 15000
+      drops:
+        - {material: STRING, min: 0, max: 2, chance: 1.0}
+        - {material: SPIDER_EYE, min: 1, max: 1, chance: 0.33}
+    CREEPER:
+      seconds: 25
+      xp: 5
+      value: 20000
+      drops:
+        - {material: GUNPOWDER, min: 0, max: 2, chance: 1.0}
+    COW:
+      seconds: 20
+      xp: 3
+      value: 10000
+      drops:
+        - {material: BEEF, min: 1, max: 3, chance: 1.0}
+        - {material: LEATHER, min: 0, max: 2, chance: 1.0}
+    ENDERMAN:
+      seconds: 30
+      xp: 5
+      value: 40000
+      drops:
+        - {material: ENDER_PEARL, min: 0, max: 1, chance: 0.5}
+    BLAZE:
+      seconds: 30
+      xp: 10
+      value: 50000
+      drops:
+        - {material: BLAZE_ROD, min: 0, max: 1, chance: 0.5}
+    IRON_GOLEM:
+      seconds: 40
+      xp: 0
+      value: 60000
+      drops:
+        - {material: IRON_INGOT, min: 3, max: 5, chance: 1.0}
+        - {material: POPPY, min: 0, max: 2, chance: 0.5}

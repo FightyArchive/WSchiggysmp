@@ -1,0 +1,30 @@
+# SchiggyCombat
+#
+# Wer einen anderen Spieler trifft oder von einem getroffen wird, bekommt einen Combat Tag.
+# Jeder weitere Treffer setzt die Zeit zurueck. Welche Befehle und Teleports gesperrt sind,
+# steht in der restrictions.yml.
+
+# Dauer des Combat Tags in Sekunden
+duration-seconds: 15
+
+# Anzeige der verbleibenden Zeit
+bossbar:
+  enabled: true
+  color: RED          # BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+  overlay: PROGRESS   # PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+actionbar:
+  enabled: true
+
+# In diesen Welten gibt es keinen Combat Tag
+disabled-worlds: []
+
+# Was passiert, wenn jemand waehrend des Combats den Server verlaesst
+combat-log:
+  # Der Spieler stirbt (Items fallen am Ort), wie bei einem normalen Tod
+  kill-player: true
+  # Meldung an alle Spieler
+  broadcast: true
+  # Zusaetzliche Konsolen-Befehle ({player} = Name), z. B. eine Strafe
+  penalty-commands: []
+  # Wenn kill-player aus ist: Der Tag bleibt, die Restzeit laeuft nach dem Wiedereinloggen weiter
+  keep-tag-after-rejoin: true

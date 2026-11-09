@@ -1,0 +1,27 @@
+# SchiggyGamble - Investment-System
+#
+# Wer Geld investiert, bekommt in jedem Intervall automatisch Einkommen: investierter Betrag x Zinssatz.
+# Das Einkommen sammelt sich an und wird mit /claiminvest abgeholt (oder automatisch, wenn der Spieler
+# /autocollecttoggle eingeschaltet hat). /deleteinvest zahlt 100 % des angelegten Geldes zurueck.
+# Alle Werte kannst du ingame mit /investadmin aendern.
+
+# Zinssatz pro Intervall als Dezimalzahl: 0.001 = 0,1 % des investierten Betrags pro Intervall
+rate: 0.001
+
+# Dauer eines Intervalls in Ticks (20 Ticks = 1 Sekunde)
+interval-ticks: 20
+
+# Maximal erlaubtes Investment pro Spieler (normale Einheiten)
+max-investment: 1000000000000
+
+# Kleinste Einzahlung (normale Einheiten)
+min-amount: 1
+
+# Fuer wie viele Stunden wird Einkommen hoechstens gutgeschrieben, waehrend der Spieler offline ist
+max-offline-hours: 24
+
+# Neue Spieler haben das automatische Einsammeln standardmaessig
+auto-collect-default: false
+
+# Die Betraege der Schnellwahl-Knoepfe im Menue (maximal 4)
+quick-amounts: [1000, 10000, 100000, 1000000]

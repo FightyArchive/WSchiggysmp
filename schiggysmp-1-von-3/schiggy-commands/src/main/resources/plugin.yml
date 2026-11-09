@@ -1,0 +1,19 @@
+name: SchiggyCommands
+version: '${project.version}'
+main: de.schiggy.commands.SchiggyCommands
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore]
+authors: [FightyFinn]
+description: Befehls-Whitelist - bestimmte Befehle nur für bestimmte Gruppen
+commands:
+  schiggycommands:
+    description: Verwaltung der Befehls-Whitelist
+    aliases: [fcmds]
+permissions:
+  schiggy.commands.admin:
+    description: /schiggycommands benutzen
+    default: op
+  schiggy.commands.bypass:
+    description: Darf alle Befehle benutzen
+    default: op

@@ -1,0 +1,27 @@
+name: SchiggyExtras
+version: '${project.version}'
+main: de.schiggy.extras.SchiggyExtras
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore, SchiggyEconomy, SchiggyWorth]
+authors: [FightyFinn]
+description: Spawner, Amethyst-Werkzeuge mit Uses, Sell-Wand (weitere Systeme folgen in diesem Plugin)
+commands:
+  spawner:
+    description: Spawner verwalten (/spawner give, /spawner list, /spawner reload)
+  tools:
+    description: Amethyst-Werkzeuge verwalten (/tools give, /tools list, /tools reload)
+    aliases: [amethyst]
+permissions:
+  schiggy.spawners.use:
+    description: Spawner platzieren und benutzen
+    default: true
+  schiggy.spawners.admin:
+    description: Spawner geben, fremde Spawner benutzen und abbauen
+    default: op
+  schiggy.tools.use:
+    description: Amethyst-Werkzeuge benutzen
+    default: true
+  schiggy.tools.admin:
+    description: Werkzeuge geben und neu laden
+    default: op

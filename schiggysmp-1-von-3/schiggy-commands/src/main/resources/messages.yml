@@ -1,0 +1,10 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+blocked: "{prefix}<red>Diesen Befehl darfst du nicht benutzen."
+reloaded: "{prefix}<green>Die Befehls-Whitelist wurde neu geladen (<white>{count}</white> Gruppen)."
+usage: "{prefix}<gray>Benutzung: <white>/schiggycommands reload</white> <gray>oder <white>/schiggycommands check [Spieler] [Befehl]"
+check-result: "{prefix}<white>{player}</white> <gray>darf <white>/{command}</white>: {result}"
+result-yes: "<green>Ja"
+result-no: "<red>Nein"
+player-offline: "{prefix}<red>Der Spieler ist nicht online."

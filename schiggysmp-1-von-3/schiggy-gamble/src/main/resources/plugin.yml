@@ -1,0 +1,27 @@
+name: SchiggyGamble
+version: '${project.version}'
+main: de.schiggy.gamble.SchiggyGamble
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore, SchiggyEconomy]
+authors: [FightyFinn]
+description: Investment-System - lege Geld an und erhalte automatisch Einkommen
+commands:
+  invest:
+    description: Öffnet das Investment-Menü oder investiert einen Betrag
+    aliases: [investieren]
+  claiminvest:
+    description: Holt das erzeugte Einkommen deines Investments ab
+  deleteinvest:
+    description: Löscht dein Investment und zahlt das angelegte Geld zurück
+  autocollecttoggle:
+    description: Schaltet das automatische Einsammeln ein oder aus
+  investadmin:
+    description: Admin - Zinssatz, Intervall, Maximum und Spieler-Investments verwalten
+permissions:
+  schiggy.invest.use:
+    description: Investment-Befehle benutzen
+    default: true
+  schiggy.invest.admin:
+    description: /investadmin benutzen
+    default: op
