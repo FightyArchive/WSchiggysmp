@@ -1,0 +1,31 @@
+# SchiggyOrders
+
+# Wie lange eine Order laeuft (Stunden). Danach wird das uebrige Geld zurueckgezahlt.
+duration-hours: 72
+
+# Wie viele aktive Orders ein Spieler gleichzeitig haben darf.
+# Pro Rang aenderst du das ueber LuckPerms mit dem Recht schiggy.order.slots.<Zahl> (z. B. schiggy.order.slots.10),
+# der hoechste Wert gilt. Ohne Recht gilt dieser Standard.
+max-orders: 5
+
+# Maximale Menge pro Order
+max-amount: 2304
+
+# Preis pro Stueck (normale Einheiten)
+min-unit-price: 0.5
+max-unit-price: 1000000
+
+# Gebuehr in Prozent, die dem Lieferanten von der Bezahlung abgezogen wird
+fee-percent: 5
+
+# Diese Items duerfen nicht bestellt werden
+blacklist:
+  - BEDROCK
+  - BARRIER
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - STRUCTURE_BLOCK
+  - JIGSAW
+  - DEBUG_STICK
+  - SPAWNER

@@ -1,0 +1,28 @@
+# SchiggyAuction
+
+# Wie lange eine Auktion laeuft (Stunden), danach kann der Verkaeufer das Item abholen
+duration-hours: 48
+
+# Wie viele aktive Auktionen ein Spieler gleichzeitig haben darf.
+# Pro Rang aenderst du das ueber LuckPerms mit dem Recht schiggy.ah.slots.<Zahl> (z. B. schiggy.ah.slots.20),
+# der hoechste Wert gilt. Ohne Recht gilt dieser Standard.
+max-listings: 10
+
+# Gebuehr auf den Verkaufspreis in Prozent. Der Verkaeufer erhaelt den Preis abzueglich der Gebuehr.
+sale-fee-percent: 5
+
+# Preis-Grenzen (Gesamtpreis des Stapels, normale Einheiten)
+min-price: 1
+max-price: 1000000000
+
+# Diese Items duerfen nicht versteigert werden
+blacklist:
+  - BEDROCK
+  - BARRIER
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - STRUCTURE_BLOCK
+  - JIGSAW
+  - DEBUG_STICK
+  - SPAWNER

@@ -1,0 +1,17 @@
+name: SchiggyTab
+version: '${project.version}'
+main: de.schiggy.tab.SchiggyTab
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore]
+softdepend: [SchiggyEconomy, SchiggySettings, SchiggyStats, LuckPerms]
+authors: [FightyFinn]
+description: Tab-Liste (Kopf-/Fußzeile, Namen mit Rang) und Sidebar-Scoreboard
+commands:
+  schiggytab:
+    description: Verwaltung von SchiggyTab (/schiggytab reload)
+    aliases: [ftab]
+permissions:
+  schiggy.tab.admin:
+    description: /schiggytab reload benutzen
+    default: op

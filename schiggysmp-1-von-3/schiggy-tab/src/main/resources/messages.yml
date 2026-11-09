@@ -1,0 +1,5 @@
+prefix: "<gradient:#ff5555:#ffaa00><bold>SchiggySMP</bold></gradient> <dark_gray>»</dark_gray> "
+
+no-permission: "{prefix}<red>Dafür hast du keine Berechtigung."
+usage: "{prefix}<gray>Benutzung: <white>/schiggytab reload"
+reloaded: "{prefix}<green>SchiggyTab wurde neu geladen. Texte und Scoreboard sind aktualisiert."

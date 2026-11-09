@@ -1,0 +1,19 @@
+name: SchiggyShop
+version: '${project.version}'
+main: de.schiggy.shop.SchiggyShop
+api-version: '1.21'
+folia-supported: true
+depend: [SchiggyCore, SchiggyEconomy]
+authors: [FightyFinn]
+description: Ingame-Shop mit Kategorien (/shop), Kauf mit Geld oder Gems
+commands:
+  shop:
+    description: Öffnet den Shop
+    aliases: [store]
+permissions:
+  schiggy.shop.use:
+    description: /shop benutzen
+    default: true
+  schiggy.shop.admin:
+    description: /shop reload benutzen
+    default: op
